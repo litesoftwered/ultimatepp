@@ -383,6 +383,10 @@ void RichTxt::ApplyZoom(Zoom z, const RichStyles& ostyle, const RichStyles& zsty
 			p.ApplyZoom(z);
 			Set(i, p, zstyle);
 		}
+	
+	// update header and footer zoom
+	if (header) header->ApplyZoom(z);
+	if (footer) footer->ApplyZoom(z);
 }
 
 }
